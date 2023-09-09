@@ -28,3 +28,10 @@ require("nvim-tree").setup({
 
 vim.o.termguicolors = true
 vim.cmd'colorscheme tokyonight-night'
+
+vim.g.UltiSnipsSnippetDirectories = {"UltiSnips", "my_snippets"}
+
+vim.g.UltiSnipsExpandTrigger = '<tab>'
+vim.g.UltiSnipsJumpForwardTrigger = '<tab>'
+vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
+

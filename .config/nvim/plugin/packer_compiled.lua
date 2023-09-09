@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/Users/haeohreumkim/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  harpoon = {
-    loaded = true,
-    path = "/Users/haeohreumkim/.local/share/nvim/site/pack/packer/start/harpoon",
-    url = "https://github.com/ThePrimeagen/harpoon"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/haeohreumkim/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -155,10 +150,25 @@ _G.packer_plugins = {
     path = "/Users/haeohreumkim/.local/share/nvim/site/pack/packer/start/tokyonight-night",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ultisnips = {
+    loaded = true,
+    path = "/Users/haeohreumkim/.local/share/nvim/site/pack/packer/start/ultisnips",
+    url = "https://github.com/sirver/ultisnips"
+  },
   undotree = {
     loaded = true,
     path = "/Users/haeohreumkim/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/Users/haeohreumkim/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
+  },
+  vimwiki = {
+    loaded = true,
+    path = "/Users/haeohreumkim/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 

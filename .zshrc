@@ -1,4 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -20,7 +20,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="lambda-gitster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -42,7 +41,7 @@ ZSH_THEME="lambda-gitster"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
-
+ZSH_THEME=lambda-gitster
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
 
@@ -89,7 +88,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -99,7 +97,6 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -112,12 +109,42 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+# # Your zID (change this)
+_SSHFS_ZID=z5480978
+# Your desired mountpoint for your CSE home directory
+_SSHFS_CSE_MOUNT="$HOME/cse"
 
+alias csemnt="sshfs -o idmap=user -C ${_SSHFS_ZID}@login${_SSHFS_ZID: -1}.cse.unsw.edu.au: ${_SSHFS_CSE_MOUNT}"
+alias cseumount="umount -fv ${_SSHFS_CSE_MOUNT}"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+function cse() {
+    # determine where we are relative to the mountpoint (thanks @ralismark)
+    local rel=${PWD##${_SSHFS_CSE_MOUNT}}
+
+    if [ -z "$1" ]; then
+        # if we don't have arguments, we give the user a shell on the remote cse machine.
+        if [ "$PWD" = "$rel" ]; then
+            # in the case that we're not in our mountpoint, provide a shell in their home directory.
+            ssh "${_SSHFS_ZID}@login${_SSHFS_ZID: -1}.cse.unsw.edu.au"
+        else
+            # if within the mountpoint, cd to the equivalent dir on the remote before providing a shell (thanks @ralismark)
+            ssh "${_SSHFS_ZID}@login${_SSHFS_ZID: -1}.cse.unsw.edu.au" -t "cd $(printf "%q" "./$rel"); exec \$SHELL -l"
+        fi
+    else
+        # if we have arguments, we have a command to execute.
+        if [ "$PWD" = "$rel" ]; then
+            # in the case that we're not in our mountpoint, we'll execute in the home directory.
+            ssh -qt "${_SSHFS_ZID}@login${_SSHFS_ZID: -1}.cse.unsw.edu.au" "$@"
+        else
+            # if within the mountpoint, cd to the equivalent dir on the remote before executing (thanks @ralismark)
+            ssh "${_SSHFS_ZID}@login${_SSHFS_ZID: -1}.cse.unsw.edu.au" -qt "cd $(printf "%q" "./$rel") && $(printf "%q " "$@")"
+        fi
+    fi
+}
+
 
 export PATH=$PATH:/Users/haeohreumkim/.spicetify
-export TERM=alacritty-direct
 
+export TERM=alacritty-direct
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 

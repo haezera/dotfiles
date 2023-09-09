@@ -22,14 +22,17 @@ return require('packer').startup(function(use)
 
   use('preservim/nerdtree')
 
-  use('nvim-tree/nvim-tree.lua')
+  use('vimwiki/vimwiki')
 
-  use('ThePrimeagen/harpoon')
+  use('nvim-tree/nvim-tree.lua')
 
   use('mbbill/undotree')
 
   use('m4xshen/autoclose.nvim')
 
+  use('lervag/vimtex')
+
+  use('sirver/ultisnips')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
