@@ -25,13 +25,12 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
-
 vim.o.termguicolors = true
-vim.cmd'colorscheme tokyonight-night'
-
-vim.g.UltiSnipsSnippetDirectories = {"UltiSnips", "my_snippets"}
+vim.cmd'colorscheme rose-pine'
 
 vim.g.UltiSnipsExpandTrigger = '<tab>'
 vim.g.UltiSnipsJumpForwardTrigger = '<tab>'
 vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
+vim.g.tex_flavor='latex'
+vim.g.vimtex_view_method='skim'
 

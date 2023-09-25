@@ -22,7 +22,7 @@ scrolling:
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono Nerd Font 
     style:  Regular
   bold:
     family: JetBrainsMono Nerd Font
@@ -33,7 +33,7 @@ font:
   bold_italic:
     family: JetBrainsMono Nerd Font
     style: Bold Italic
-  size: 15
+  size: 18
 draw_bold_text_with_bright_colors: false
 
 selection:
@@ -42,39 +42,45 @@ selection:
 key_bindings:
   - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
 
-# Colors (Ayu Dark)
-schemes:
-  # Tokyo Night theme, based on both:
-  #   https://github.com/ghifarit53/tokyonight-vim
-  #   https://github.com/enkia/tokyo-night-vscode-theme
-    # Default colors
-  tokyo-night: &tokyo-night
-    primary:
-      background: '#1a1b26'
-      foreground: '#a9b1d6'
+colors:
+  primary:
+    background: "0x0d0b01"
+    foreground: "0xcfd2d4"
+  cursor:
+    text: "0xc1bfc7"
+    cursor: "0x524f67"
+  vi_mode_cursor:
+    text: "0xc1bfc7"
+    cursor: "0x524f67"
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: "0xc1bfc7"
+    background: "0x403d52"
+  normal:
+    black: "0x0d0b01"
+    red: "0xac7a7e"
+    green: "0x7a7e76"
+    yellow: "0xedc995"
+    blue: "0xcacec7"
+    magenta: "0xc4a7e7"
+    cyan: "0xebbcba"
+    white: "0xe0def4"
+  bright:
+    black: "0x6e6a86"
+    red: "0xeb6f92"
+    green: "0x31748f"
+    yellow: "0xf6c177"
+    blue: "0x9ccfd8"
+    magenta: "0xc4a7e7"
+    cyan: "0xebbcba"
+    white: "0xe0def4"
+  hints:
+    start:
+      foreground: "#908caa"
+      background: "#1f1d2e"
+    end:
+      foreground: "#6e6a86"
+      background: "#1f1d2e"
 
-    # Normal colors
-    normal:
-      black:   '#32344a'
-      red:     '#f7768e'
-      green:   '#9ece6a'
-      yellow:  '#e0af68'
-      blue:    '#7aa2f7'
-      magenta: '#ad8ee6'
-      cyan:    '#449dab'
-      white:   '#787c99'
-
-    # Bright colors
-    bright:
-      black:   '#444b6a'
-      red:     '#ff7a93'
-      green:   '#b9f27c'
-      yellow:  '#ff9e64'
-      blue:    '#7da6ff'
-      magenta: '#bb9af7'
-      cyan:    '#0db9d7'
-      white:   '#acb0d0'
-env:
-  TERM: xterm-256color
-
-colors: *tokyo-night

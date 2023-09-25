@@ -9,12 +9,12 @@ return require('packer').startup(function(use)
 	-- or                            , branch = '0.1.x',
   	requires = { {'nvim-lua/plenary.nvim'} }
   }
-
+  
   use({ 
-      'folke/tokyonight.nvim',
-      as = 'tokyonight-night',
+      'haezera/neovim',
+      as = 'rose-pine',
       config = function()
-          vim.cmd('colorscheme tokyonight-night')
+          vim.cmd('colorscheme rose-pine')
       end
   })
 
@@ -34,6 +34,10 @@ return require('packer').startup(function(use)
 
   use('sirver/ultisnips')
 
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
