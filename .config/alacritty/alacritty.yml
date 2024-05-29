@@ -5,7 +5,7 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: alacritty
+  TERM: xterm-256color
 
 window:
   padding:
@@ -22,18 +22,18 @@ scrolling:
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font 
+    family: FiraCode Nerd Font 
     style:  Regular
   bold:
-    family: JetBrainsMono Nerd Font
+    family: FiraCode Nerd Font
     style:  Bold
   italic:
-    family: JetBrainsMono Nerd Font
+    family: FiraCode Nerd Font  
     style:  Italic
   bold_italic:
-    family: JetBrainsMono Nerd Font
+    family: FiraCode Nerd Font 
     style: Bold Italic
-  size: 18
+  size: 16
 draw_bold_text_with_bright_colors: false
 
 selection:
@@ -41,46 +41,6 @@ selection:
 
 key_bindings:
   - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
-
-colors:
-  primary:
-    background: "0x171717"
-    foreground: "0xcfd2d4"
-  cursor:
-    text: "0xc1bfc7"
-    cursor: "0x524f67"
-  vi_mode_cursor:
-    text: "0xc1bfc7"
-    cursor: "0x524f67"
-  line_indicator:
-    foreground: None
-    background: None
-  selection:
-    text: "0xc1bfc7"
-    background: "0x403d52"
-  normal:
-    black: "0x0d0b01"
-    red: "0xac7a7e"
-    green: "0x7a7e76"
-    yellow: "0xedc995"
-    blue: "0xcacec7"
-    magenta: "0xc4a7e7"
-    cyan: "0xebbcba"
-    white: "0xe0def4"
-  bright:
-    black: "0x6e6a86"
-    red: "0xeb6f92"
-    green: "0x31748f"
-    yellow: "0xf6c177"
-    blue: "0x9ccfd8"
-    magenta: "0xc4a7e7"
-    cyan: "0xebbcba"
-    white: "0xe0def4"
-  hints:
-    start:
-      foreground: "#908caa"
-      background: "#1f1d2e"
-    end:
-      foreground: "#6e6a86"
-      background: "#1f1d2e"
+# (Github Dark) Colors for Alacritty
+# The definition of color schemes.
 

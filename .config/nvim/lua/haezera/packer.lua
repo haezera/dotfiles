@@ -11,33 +11,38 @@ return require('packer').startup(function(use)
   }
   
   use({ 
-      'haezera/neovim',
-      as = 'rose-pine',
+      "sainnhe/gruvbox-material",
+      as = 'gruvbox-material',
       config = function()
-          vim.cmd('colorscheme rose-pine')
+          vim.cmd('colorscheme gruvbox-material')
       end
   })
+  use('windwp/nvim-ts-autotag')
 
   use('nvim-treesitter/nvim-treesitter')
 
   use('preservim/nerdtree')
-
-  use('vimwiki/vimwiki')
 
   use('nvim-tree/nvim-tree.lua')
 
   use('mbbill/undotree')
 
   use('m4xshen/autoclose.nvim')
-
+  use('andweeb/presence.nvim')
   use('lervag/vimtex')
 
   use('sirver/ultisnips')
+  use('github/copilot.vim')
 
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+  -- Tab bar learned
+  use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
+  use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+  use 'romgrk/barbar.nvim' 
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
