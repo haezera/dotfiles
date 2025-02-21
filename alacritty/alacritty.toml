@@ -1,14 +1,11 @@
-[colors]
-draw_bold_text_with_bright_colors = false
-
 [env]
 TERM = "xterm-256color"
 
 [window]
-opacity=0.9
+opacity=0.95
 
 [font]
-size = 16
+size = 14
 
 [font.bold]
 family = "FiraCode Nerd Font Mono"
@@ -46,31 +43,30 @@ instance = "Alacritty"
 x = 5
 y = 5
 
-# Colors (Gruvbox Material Medium Dark)
-
-# Default colors
 [colors.primary]
-background = '#282828'
-foreground = '#d4be98'
+background = "#FFFFFF"
+foreground = "#343434"
 
-# Normal colors
+[colors.cursor]
+text = "CellBackground"
+cursor = "#6F6F6F"
+
 [colors.normal]
-black   = '#3c3836'
-red     = '#ea6962'
-green   = '#a9b665'
-yellow  = '#d8a657'
-blue    = '#7daea3'
-magenta = '#d3869b'
-cyan    = '#89b482'
-white   = '#d4be98'
+black = "#C4C4C4"
+red = "#FF0000"
+green = "#008000"
+yellow = "#795E26"
+blue = "#0000FF"
+magenta = "#AF00DB"
+cyan = "#16825D"
+white = "#343434"
 
-# Bright colors (same as normal colors)
 [colors.bright]
-black   = '#3c3836'
-red     = '#ea6962'
-green   = '#a9b665'
-yellow  = '#d8a657'
-blue    = '#7daea3'
-magenta = '#d3869b'
-cyan    = '#89b482'
-white   = '#d4be98'
+black = "#E5E5E5"
+red = "#A31515"
+green = "#098658"
+yellow = "#800000"
+blue = "#007ACC"
+magenta = "#AF00DB"
+cyan = "#16825D"
+white = "#FFFFFF"
