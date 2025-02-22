@@ -16,7 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("hae.plugins")
 
 vim.cmd([[colorscheme vscode]])
-vim.o.background = 'light'
+vim.o.background = 'dark'
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.number = true
 vim.opt.relativenumber = true

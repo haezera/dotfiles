@@ -8,6 +8,6 @@ return {
         vim.g.gruvbox_material_enable_italic = true
         vim.g.gruvbox_material_transparent_background = 1
         vim.cmd.colorscheme('vscode')
-        vim.o.background = 'light'
+        vim.o.background = 'dark'
       end
     }
