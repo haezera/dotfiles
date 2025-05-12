@@ -1,0 +1,3 @@
+ReColor: 688199788
+AnkiCord: 933207442
+Change Interface Font: 1431333984
