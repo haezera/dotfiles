@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("hae.plugins")
 
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[colorscheme tokyonight-night]])
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.number = true
 vim.opt.relativenumber = true
