@@ -1,11 +1,8 @@
-[window]
-opacity = 0.9
-
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 14
+size = 13
 
 [font.bold]
 family = "FiraCode Nerd Font"
@@ -44,25 +41,37 @@ x = 5
 y = 5
 
 [colors.primary]
-foreground = "#cccccc"
-background = "#1e1e1e"
+background = '#300a24'
+foreground = '#eeeeec'
 
+# 0x Colors the cursor will use if `custom_cursor_colors` is true
+[colors.cursor]
+text = '#bbbbbb'
+cursor = '#b4d5ff'
+
+# 0x Normal colors
 [colors.normal]
-black = "#000000"
-red = "#cd3131"
-green = "#0dbc79"
-yellow = "#e5e510"
-blue = "#2472c8"
-magenta = "#bc3fbc"
-cyan = "#11a8cd"
-white = "#e5e5e5"
+black   = '#2e3436'
+red     = '#cc0000'
+green   = '#4e9a06'
+yellow  = '#c4a000'
+blue    = '#3465a4'
+magenta = '#75507b'
+cyan    = '#06989a'
+white   = '#d3d7cf'
 
+# 0x Bright colors
 [colors.bright]
-black = "#666666"
-red = "#f14c4c"
-green = "#23d18b"
-yellow = "#f5f543"
-blue = "#3b8eea"
-magenta = "#d670d6"
-cyan = "#29b8db"
-white = "#e5e5e5"
+black   = '#555753'
+red     = '#ef2929'
+green   = '#8ae234'
+yellow  = '#fce94f'
+blue    = '#729fcf'
+magenta = '#ad7fa8'
+cyan    = '#34e2e2'
+white   = '#eeeeec'
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
